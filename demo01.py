@@ -66,16 +66,26 @@ python的语法
 1、字典中的值没有顺序
 2、字典中的结构必须是键值对的结构
 """
-a={"name":"张三",0:"你好","age":18}
-# 取值
-print(a["name"])
-# 新增
-a["height"]="178cm"
-print(a)
-# 修改
-a["name"]="王八"
-print(a)
+# a={"name":"张三",0:"你好","age":18}
+# # 取值
+# print(a["name"])
+# # 新增
+# a["height"]="178cm"
+# print(a)
+# # 修改
+# a["name"]="王八"
+# print(a)
 
-
+"""
+练习：
+获取用户输入的个人信息，并且储存到字典中
+个人信息包括：name,age,sex
+"""
+name=input("请输入你的姓名：")
+age=input("请输入你的年龄：")
+sex=input("请输入你的性别：")
+userinfo={}
+userinfo.update(name=name,age=age,sex=sex)
+print(userinfo)
 
 
