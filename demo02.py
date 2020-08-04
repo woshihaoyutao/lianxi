@@ -73,12 +73,16 @@ for循环
 # 用户输入账号和密码，要求账号长度为5-8位，密码6-12位，并且账号必须小写开头
 # 存储到字典中{}
 
-userinfo={}
-user=input("账号：")
-password=input ("密码：")
+username=input("请输入账号：")
+password=input ("请输入密码：")
 print("**********************")
-if len(user)>=5 and len(user)<=8 and len(password)>=6 and len(password)<=12:
-  userinfo[user]=password
-  print(userinfo)
+if len(username)>=5 and len(username)<=8:
+  if username[0] in "qwertyuiopasdfghjklzxcvbnm":
+    if len(password)>=8 and len(password)<=12:
+      print("注册成功！",{username:password})
+    else:
+      print("密码必须8-12位！")
+  else:
+    print("账号的首字母必须是小写！")
 else:
-  print("错误！请输入正确的信息.")
+  print("账号的长度不符合规范，请输入5-8位的账号") 
